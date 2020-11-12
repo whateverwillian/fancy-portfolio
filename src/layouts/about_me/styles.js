@@ -4,7 +4,7 @@ import { max_width } from '../../constants/variables'
 
 export const Container = styled.section`
   width: 100%;
-  margin-top: -20rem;
+  margin-top: -25rem;
   padding: 30rem 0;
   background-color: #eee;
 `
@@ -13,9 +13,6 @@ export const Section = styled.section`
   max-width: ${max_width};
   margin: 0 auto;
   text-align: center;
-
-  // aux
-  /* background-color: grey; */
 `
 
 export const Information = styled.div`
@@ -33,6 +30,7 @@ export const Title = styled.h2`
   background-image: linear-gradient(to right, rgba(150, 0, 196), rgba(87,84,255), rgba(48,45,255));
   background-size: cover;
   color: transparent;
+
   -webkit-background-clip: text;
 `
 
@@ -56,10 +54,34 @@ export const Details = styled.div`
 
   p {
     font-weight: 300;
+    line-height: 2.5rem;
     font-size: 1.6rem;
   }
+  
+  a:link,
+  a:visited {
+    display: inline-block;
+    margin-top: 1.2rem;
+    font-size: 1.6rem;
+    transition: all .2s;
 
-  /* background-color: green; */
+    text-decoration: none;
+    color: rgba(87,84,255);
+    padding: 1rem .5rem;
+    border-bottom: 1px solid rgba(87,84,255);
+  }
+
+  a:hover {
+    color: #fff;
+    background-color: rgba(87,84,255);
+    transform: scale(1.05) translateY(-.2rem);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.3);
+  }
+
+  a:active {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.3);
+    transform: translateY(0);
+  }
 `
 
 export const Images = styled.div`
@@ -74,21 +96,22 @@ export const Image = styled.div`
   position: absolute;
   background-size: cover;
   background-position: center;
-  
+  box-shadow: 0 1.5rem 3rem rgba(0,0,0,.25);
+
   ${({ image, firstImage }) => firstImage && css`
-    top: -1.5rem;
+    top: 0;
     left: 0;
     background-image: url(${image});
   `}
 
   ${({ image, secondImage }) => secondImage && css`
-    top: 2rem;
+    top: 4rem;
     right: 0;
     background-image: url(${image});
   `}
 
   ${({ image, thirdImage }) => thirdImage && css`
-    top: 10rem;
+    top: 16rem;
     left: 20%;
     background-image: url(${image});
   `}

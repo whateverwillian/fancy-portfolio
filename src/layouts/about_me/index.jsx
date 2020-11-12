@@ -10,28 +10,31 @@ import {
   Image,
 } from './styles'
 
-import Image1 from '../../assets/nat-1-large.jpg'
-import Image2 from '../../assets/nat-2-large.jpg'
-import Image3 from '../../assets/nat-3-large.jpg'
+import one from '../../assets/nat-1-large.jpg'
+import two from '../../assets/nat-2-large.jpg'
+import three from '../../assets/nat-3-large.jpg'
 
 const AboutMe = () => {
   return (
     <Container>
       <Section>
-        <Title>I don't know what to write here</Title>
+        <Title>I'm a developer with fullstack experience</Title>
 
         <Information>
           <Details>
-            <h3>Motivated to produce results</h3>
-            <p>Tenho seis meses de experiência desenvolvendo aplicações fullstack nas tecnologias ReactJS, React Native e NodeJS, todas em Typescript. Com foco em backend (node).</p>
+            <h3>How I think</h3>
+            <p>I’m a self-taught professional passionate for learning and always looking for ways to expand my knowledge. I enjoy working as a team and meeting different people and perspectives because nobody makes big changes alone. As the history of mankind shows us, diversity is strength.</p>
 
-            <h3>The most cool guy</h3>
-            <p>Também tenho experiência com SQL, postgres, mongoDB, Redis, integrações com 3rd API’s (stripe, amazon, etc), AWS (s3, ses, ec2), docker e docker-compose, CI/CD, testes, SSH, entre outros. Eu compreendo inglês muito bem, mas o escrever/falar está em progresso.</p>
+            <h3>My experience</h3>
+            <p>I have experience with a wide range of technologies, most of them related to JavaScript, more specially ReactJS, React Native and NodeJS.</p>  
+            <p>I already worked with SQL, postgres, mongoDB, Redis, integrations with 3rd API’s (stripe, amazon, etc.), AWS (s3, ses, ec2), docker and docker-compose, CI / CD, testing, security, performance, among others.</p>
+
+            <a href="/resume">See resume &rarr;</a>
           </Details>
           <Images>
-            <Image image={Image1} firstImage={true} />
-            <Image image={Image2} secondImage={true} />
-            <Image image={Image3} thirdImage={true}/>
+            <Image image={one} firstImage />
+            <Image image={two} secondImage />
+            <Image image={three} thirdImage />
           </Images>
         </Information>
       </Section>
