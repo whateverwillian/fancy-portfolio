@@ -4,9 +4,8 @@ import { max_width } from '../../constants/variables'
 
 export const Container = styled.section`
   width: 100%;
-  margin-top: -25rem;
-  padding: 30rem 0;
-  background-color: #eee;
+  margin-top: -20rem;
+  padding: 30rem 0 15rem 0;
 `
 
 export const Section = styled.section`
@@ -56,6 +55,10 @@ export const Details = styled.div`
     font-weight: 300;
     line-height: 2.5rem;
     font-size: 1.6rem;
+  
+    & + p {
+      margin-top: .8rem;
+    }
   }
   
   a:link,
@@ -86,8 +89,11 @@ export const Details = styled.div`
 
 export const Images = styled.div`
   width: 100%;
-  height: 50rem;
   position: relative;
+
+  &:hover div:not(:hover) {
+    transform: scale(.95);
+  }
 `
 
 export const Image = styled.div`
@@ -97,6 +103,15 @@ export const Image = styled.div`
   background-size: cover;
   background-position: center;
   box-shadow: 0 1.5rem 3rem rgba(0,0,0,.25);
+  transition: all .2s;
+  outline-offset: 2rem;
+  
+  &:hover {
+    z-index: 2;
+    outline: 1rem solid rgba(87,84,255);
+    transform: scale(1.1) translateY(-.8rem);
+    box-shadow: 0 2rem 4rem rgba(0,0,0,.5);
+  }
 
   ${({ image, firstImage }) => firstImage && css`
     top: 0;

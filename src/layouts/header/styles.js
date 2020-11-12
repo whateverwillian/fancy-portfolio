@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 
+const gif_url = 'https://media.giphy.com/media/xUA7aW1ddSxtVT5zzi/giphy.gif'
+
 export const Container = styled.header`
   height: 95vh;
   position: relative;
-  background-image: linear-gradient(to right bottom, rgba(87,84,255,.6), rgba(48,45,255,.6)), url('https://media.giphy.com/media/xUA7aW1ddSxtVT5zzi/giphy.gif');
+  background-image: linear-gradient(to right bottom, rgba(87,84,255,.6), rgba(48,45,255,.6)), url(${gif_url});
   background-position: center;
   background-size: cover;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
